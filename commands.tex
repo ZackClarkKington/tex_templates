@@ -1,0 +1,9 @@
+\newcommand{\answer}[2]{%
+  \ifthenelse{\equal{#1}{}}{%
+      \-\ \indent \parbox{\textwidth}{#2}\\
+    }{%
+      \-\ \textbf{(#1)}\\\indent\parbox{\textwidth}{#2}\\
+    }
+  }
+\newcommand{\state}[3]{\node[circle, minimum size=1em, inner sep=0.5pt, draw] at (#1) (#2) {#3};}
+\newcommand{\transition}[3]{\path[->](#1) edge node {#2} (#3);}
